@@ -3,8 +3,10 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './PokemonCard.css';
 import './borderColor.css';
+import './textColor.css';
 import getColors from '../../utils/getColors';
 import getBorderColor from '../../utils/getBorderColor';
+import getTextColor from '../../utils/getTextColor';
 
 const getPokemonById = async (url) => {
   try {
@@ -47,7 +49,7 @@ const PokemonCard = ({ pokemonData }) => {
             <div className="pokemon-img">
               <img
                 loading="lazy"
-                src={pokemon.sprites.other['dream_world'].front_default}
+                src={pokemon.sprites.other['official-artwork'].front_default}
                 alt={pokemon.name}
               />
             </div>
@@ -55,7 +57,7 @@ const PokemonCard = ({ pokemonData }) => {
 
           <section className="pokemon-information">
             <section className="pokemon-information-name">
-              <h2>
+              <h2 className={`${getTextColor(pokemon.types[0].type.name)}`}>
                 {pokemon.name.replace(/^\w/, (character) => character.toUpperCase())}
               </h2>
               <p>
@@ -71,8 +73,12 @@ const PokemonCard = ({ pokemonData }) => {
             <section className="pokemon-information-skills">
               {pokemon.stats.map((stat) => (
                 <section key={stat.stat.name}>
-                  <h3>{stat.stat.name.toUpperCase()}</h3>
-                  <p>{stat.base_stat}</p>
+                  <h3 className="skill-power-title">{stat.stat.name.toUpperCase()}</h3>
+                  <p
+                    className={`${getTextColor(pokemon.types[0].type.name)} skill-power`}
+                  >
+                    {stat.base_stat}
+                  </p>
                 </section>
               ))}
             </section>

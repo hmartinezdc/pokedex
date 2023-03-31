@@ -5,6 +5,7 @@
 
 #root {
   min-height: 100vh;
+  /* background: linear-gradient(89.52deg,rgba(4, 14, 162, 0.633),rgba(202, 35, 168, 0.6)); */
 }
 body {
   font-family: 'Josefin Sans', sans-serif;

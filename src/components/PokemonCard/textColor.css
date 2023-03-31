@@ -1,0 +1,65 @@
+@media (min-width: 320px) {
+
+    .color-normal {
+        color: #BC6B7C;
+    }
+    .color-fighting {
+        color: #F1613C;
+    }
+    .color-flying {
+        color: #4596a8;
+    }
+    .color-poison {
+        color: #A564E3;
+    }
+    .color-ground {
+        color: #895C1A ;
+    }
+    .color-rock {
+        color: #8D8D94;
+    }
+    .color-bug {
+        color: #3BB039;
+    }
+    .color-ghost {
+        color: #454AA8;
+    }
+    .color-steel {
+        color: #728881;
+    }
+    .color-fire {
+        color: #E35825;
+    }
+    .color-water {
+        color: #1479FB;
+    }
+    .color-grass {
+        color: #416460;
+    }
+    .color-electric {
+        color: #2B319B;
+    }
+    .color-psychic {
+        color: #C23867;
+    }
+    .color-ice {
+        color: #64CBF5;
+    }
+    .color-dragon {
+        color: #56A4AE;
+    }
+    .color-dark {
+        color: #0D1211;
+    }
+    .color-fairy {
+        color: #bced60;
+    }
+    .color-unknown {
+        color: #6fbbc1;
+    }
+    .color-shadow {
+        color: #676b71;
+    }
+}
+    
+    

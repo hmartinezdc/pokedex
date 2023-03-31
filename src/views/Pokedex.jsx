@@ -4,6 +4,7 @@ import { UserContext } from '../contexts/UserContext';
 import PokemonCard from '../components/PokemonCard/PokemonCard';
 import { usePagination } from '../hooks/usePagination';
 import { Form } from 'react-router-dom';
+import './Pokedex.css';
 
 const Pokedex = () => {
   const { user } = useContext(UserContext);
@@ -29,56 +30,66 @@ const Pokedex = () => {
   }, [type]);
 
   return (
-    <div className="w-full p-5">
-      <p>
+    <div className="pokedex-container">
+      <div className="header">
+        <img src="/pokedex.png" alt="" />
+      </div>
+      <p className="welcome-poketrainer">
         <span className="text-red-500 font-semibold">Bienvenido {user}, </span>
         aqui podras encontrar tu pokemon favorito
       </p>
 
-      <div className="flex flex-row gap-2">
+      <div className="pagination">
         {pokemonsPagination.pages.map((page) => (
-          <button
-            key={page}
-            onClick={() => pokemonsPagination.changePageTo(page)}
-            className={pokemonsPagination.currentPage === page ? 'text-red-500' : ''}
-          >
-            {page}
-          </button>
+          <div key={page}>
+            <button
+              onClick={() => pokemonsPagination.changePageTo(page)}
+              className={pokemonsPagination.currentPage === page ? 'text-red-500' : ''}
+            >
+              {page}
+            </button>
+          </div>
         ))}
       </div>
 
-      <div>
-        <Form>
+      <div className="search-container">
+        <Form className="form-container">
           <h3 className="text-red-500">Filter for search</h3>
-          <div className="flex flex-row justify-between">
-            <div className="flex flex-row gap-3">
-              <input
-                type="text"
-                name="pokemon_name"
-                className="shadow-md border border-black"
-                value={pokemonName}
-                onChange={handleNameChange}
-              />
-              <select name="pokemon_type" value={pokemonType} onChange={handleTypeChange}>
-                <option value="">All</option>
-                {types.map((type) => (
-                  <option key={type.url} value={type.name}>
-                    {type.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <button
-              className="bg-red-500 text-white p-2 hover:bg-red-400 rounded"
-              type="submit"
-            >
-              Search
+          <div className="forms">
+            <input
+              type="list"
+              list="pokemon-list"
+              name="pokemon_name"
+              className=""
+              value={pokemonName}
+              onChange={handleNameChange}
+            />
+            <datalist id="pokemon-list">
+              {pokemons.map((pokemon) => (
+                <option key={pokemon.url} value={pokemon.name}>
+                  {pokemon.name}
+                </option>
+              ))}
+            </datalist>
+            <button className="" type="submit">
+              <i
+                className="fa-sharp fa-solid fa-magnifying-glass"
+                style={{ color: '#000000' }}
+              ></i>
             </button>
+            <select name="pokemon_type" value={pokemonType} onChange={handleTypeChange}>
+              <option value="">-All Pokemons-</option>
+              {types.map((type) => (
+                <option key={type.name} value={type.name}>
+                  {type.name}
+                </option>
+              ))}
+            </select>
           </div>
         </Form>
       </div>
 
-      <section>
+      <section className="galery-pokemons">
         {pokemonsPagination.listSlice.map((pokemon) => (
           <PokemonCard key={pokemon.url} pokemonData={pokemon} />
         ))}

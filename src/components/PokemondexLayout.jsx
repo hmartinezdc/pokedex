@@ -7,11 +7,8 @@ const PokedexLayout = () => {
 
   return (
     <div>
-      <button
-        className="bg-red-500 text-white p-2 hover:bg-red-400 rounded"
-        onClick={removeUser}
-      >
-        Log out
+      <button className="logout-button" onClick={removeUser}>
+        Salir
       </button>
       <Outlet />
     </div>
