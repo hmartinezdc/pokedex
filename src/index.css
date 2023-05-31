@@ -1,26 +1,24 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-#root {
-  min-height: 100vh;
-  /* background: linear-gradient(89.52deg,rgba(4, 14, 162, 0.633),rgba(202, 35, 168, 0.6)); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background-color: var(--card-color);
 }
-
-.float {
-  animation: float-animation 2.5s infinite ease-in-out;
+#root {
+  min-height: 100vh;
 }
-
-@keyframes float-animation {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(5%);
-  }
+:root {
+  --bg-color: #121212;
+  --card-color: #2E2C2D;
+  --card-color-g:#2E2C2D;
+  --head-color: #205F9B;
+  --text-color: white;
+  --subtext-color: #C6C8DA;
 }

@@ -1,0 +1,105 @@
+@media (min-width: 320px) {
+  .pokedex-title {
+    color: #31b3f5;
+    width: 90%;
+    background-image: linear-gradient(to right, #00a1fb, #00ec96);
+    font-size: 1.7rem;
+    font-weight: 900;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+  }
+  .pokedex-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+  }
+  .welcome-poketrainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    font-size: 1rem;
+    width: 90%;
+    text-align: center;
+  }
+  .welcome-poketrainer img {
+    width: 50px;
+    aspect-ratio: 1;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 50%;
+  }
+  .welcome-poketrainer span:nth-child(2) {
+    color: #0ad7b5;
+  }
+  .form-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .form-container h3 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .forms {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+  }
+  .forms input {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding-right: .2em;
+    padding-left: .5em;
+    background-color: var(--card-color);
+    color: var(--text-color);
+    flex: 1 1 200px;
+  }
+  .forms input:focus {
+    outline: 2px solid #31b3f5;
+  }
+  .forms button {
+    border: 0 solid transparent;
+    border-radius: 5px;
+    width: 40px;
+    aspect-ratio: 1;
+    background-color: var(--card-color);
+  }
+  .forms button i {
+    color: var(--text-color);
+    font-size: 1.5rem;
+  }
+  .forms button:active {
+    background-color: #31b3f5;
+  }
+  .forms select {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: var(--card-color);
+    color: var(--text-color);
+    height: 40px;
+    padding: 0 .5em;
+    flex: 1 1 200px;
+  }
+  .forms select:focus {
+    outline: 2px solid #31b3f5;
+  }
+  .galery-pokemons {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: scroll;
+    padding: 0.5em 0.5em;
+  }
+}

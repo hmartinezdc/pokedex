@@ -1,9 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
-import PokemondexLayout from '../components/PokemondexLayout';
-import ProtectedRoute from '../components/ProtectedRoute';
-import Home from '../views/Home';
-import Pokedex from '../views/Pokedex';
-import PokemonDetail from '../views/PokemonDetail';
+import PokemondexLayout from '../components/Layout/PokemondexLayout';
+import ProtectedRoute from '../components/common/ProtectedRoute';
+import Home from '../views/Home/Home';
+import Pokedex from '../views/Pokedex/Pokedex';
+import PokemonDetail from '../views/PokemonDetail/PokemonDetail';
 import { pokedexLoader } from './loaders/pokedexLoader';
 
 export const router = createBrowserRouter([
@@ -20,15 +20,14 @@ export const router = createBrowserRouter([
     ),
     children: [
       {
-        path: ':id',
-        element: <PokemonDetail />,
-      },
-      {
         index: true,
         element: <Pokedex />,
         loader: pokedexLoader,
       },
+      {
+        path: ':id',
+        element: <PokemonDetail />,
+      },
     ],
   },
-  {},
 ]);

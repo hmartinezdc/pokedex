@@ -1,58 +1,58 @@
 @media (min-width: 320px) {
 
     .color-normal {
-        color: #BC6B7C;
+        color: #929ba0;
     }
     .color-fighting {
-        color: #F1613C;
+        color: #ce3f6a;
     }
     .color-flying {
-        color: #4596a8;
+        color: #93aade;
     }
     .color-poison {
-        color: #A564E3;
+        color: #a564e3;
     }
     .color-ground {
-        color: #895C1A ;
+        color: #d87846;
     }
     .color-rock {
-        color: #8D8D94;
+        color: #C8B78B;
     }
     .color-bug {
-        color: #3BB039;
+        color: #90c030;
     }
     .color-ghost {
-        color: #454AA8;
+        color: #526aa6;
     }
     .color-steel {
-        color: #728881;
+        color: #5B8E9F;
     }
     .color-fire {
-        color: #E35825;
+        color: #fe9c53;
     }
     .color-water {
-        color: #1479FB;
+        color: #4b91d6;
     }
     .color-grass {
-        color: #416460;
+        color: #64bb5a;
     }
     .color-electric {
-        color: #2B319B;
+        color: #f4d23b;
     }
     .color-psychic {
-        color: #C23867;
+        color: #fc6f78;
     }
     .color-ice {
-        color: #64CBF5;
+        color: #73cebf;
     }
     .color-dragon {
-        color: #56A4AE;
+        color: #066fc2;
     }
     .color-dark {
-        color: #0D1211;
+        color: #5A5365;
     }
     .color-fairy {
-        color: #bced60;
+        color: #eb91e9;
     }
     .color-unknown {
         color: #6fbbc1;

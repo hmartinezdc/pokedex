@@ -1,0 +1,17 @@
+@media (min-width: 320px) {
+  .pokemon__detail-types {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--subtext-color);
+    padding-bottom: 5px;
+    display: flex;
+    gap: 20px;
+  }
+  .pokemon__detail-types span {
+    display: flex;
+    gap: 0.3em;
+  }
+  .pokemon__detail-types img {
+    width: 1.8rem;
+  }
+}

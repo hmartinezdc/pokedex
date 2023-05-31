@@ -1,0 +1,102 @@
+@media (min-width: 320px) {
+  .border-normal {
+    border: 2px solid #929ba0;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-fighting {
+    border: 2px solid #ce3f6a;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-flying {
+    border: 2px solid #93aade;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-poison {
+    border: 2px solid #a564e3;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-ground {
+    border: 2px solid #d87846;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-rock {
+    border: 2px solid #C8B78B;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-bug {
+    border: 2px solid #90c030;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-ghost {
+    border: 2px solid #526aa6;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-steel {
+    border: 2px solid #5B8E9F;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-fire {
+    border: 2px solid #fe9c53;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-water {
+    border: 2px solid #4b91d6;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-grass {
+    border: 2px solid #64bb5a;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-electric {
+    border: 2px solid #f4d23b;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-psychic {
+    border: 2px solid #fc6f78;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-ice {
+    border: 2px solid #73cebf;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-dragon {
+    border: 2px solid #066fc2;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-dark {
+    border: 2px solid #5A5365;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-fairy {
+    border: 2px solid #eb91e9;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-unknown {
+    border: 2px solid #6fbbc1;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+  .border-shadow {
+    border: 2px solid #676b71;
+    border-radius: 100px;
+    padding: 0 8px;
+  }
+}

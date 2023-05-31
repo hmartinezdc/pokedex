@@ -1,0 +1,47 @@
+@media (min-width: 320px) {
+    .header-form {
+      display: flex;
+      gap: 0.5em;
+    }
+    .header-form input {
+      padding-left: 1em;
+      border-radius: 0.5em;
+      color: white;
+      border: 0.2em solid #474bff;
+      background-color: #1e2446;
+    }
+    .header-form input:focus {
+      outline: 0.1em solid #474bff;
+    }
+    .header-form button {
+      font-size: 1rem;
+      color: white;
+      padding: 0.8em 1.5em;
+      font-weight: 600;
+      border: none;
+      border-radius: 0.5em;
+      background-image: linear-gradient(to left, #474bff 0%, #bc48ff 100%);
+      cursor: pointer;
+      transform: scale(1);
+      transition: transform ease 0.3s;
+    }
+    .header-form button:active {
+      background-image: linear-gradient(
+        to right,
+        hsla(239, 100%, 64%, 1) 0%,
+        hsla(278, 100%, 64%, 1) 100%
+      );
+      transform: scale(0.9);
+    }
+  
+    .form-button--error {
+      width: 75%;
+      max-width: 290px;
+      font-size: 0.8em;
+      color: #fe6d9d;
+    }
+    .form-button--error i {
+      color: yellow;
+    }
+  }
+  
