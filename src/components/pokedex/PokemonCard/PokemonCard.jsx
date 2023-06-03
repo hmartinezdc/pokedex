@@ -8,7 +8,7 @@ import getBorderColor from '../../../utils/getBorderColor';
 import getTextColor from '../../../utils/getTextColor';
 import { getPokemonData } from '../../../services/getPokemonData';
 import { getTypePokemon } from '../../../utils/getTypePokemon';
-import Spinner from '../../spinner/spinner';
+import Spinner from '../../spinner/Spinner';
 
 const statsTarget = ['hp', 'attack', 'defense', 'speed'];
 
