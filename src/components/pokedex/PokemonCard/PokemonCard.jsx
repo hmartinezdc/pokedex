@@ -8,6 +8,7 @@ import getBorderColor from '../../../utils/getBorderColor';
 import getTextColor from '../../../utils/getTextColor';
 import { getPokemonData } from '../../../services/getPokemonData';
 import { getTypePokemon } from '../../../utils/getTypePokemon';
+import Spinner from '../../spinner/spinner';
 
 const statsTarget = ['hp', 'attack', 'defense', 'speed'];
 
@@ -35,11 +36,16 @@ const PokemonCard = ({ pokemonData }) => {
 
   return (
     <>
-      {pokemon && (
-        <article onClick={handleClickNavigate} className={` pokemon-card`}>
+      {pokemon ? (
+        <article className={` pokemon-card`}>
           <header className={`${getColors(pokemon.types[0])} pokemon-header--heigth`}>
             <div className="pokemon-img">
-              <img loading="lazy" src={pokemon.img} alt={pokemon.name} />
+              <img
+                onClick={handleClickNavigate}
+                loading="lazy"
+                src={pokemon.img}
+                alt={pokemon.name}
+              />
             </div>
           </header>
 
@@ -64,12 +70,14 @@ const PokemonCard = ({ pokemonData }) => {
                   <h3 className="skill-power-title">
                     {stat.name.replace(/^\w/, (char) => char.toUpperCase())}
                   </h3>
-                  <p className={`skill-power`}>{stat.value}</p>
+                  <p>{stat.value}</p>
                 </div>
               ))}
             </section>
           </section>
         </article>
+      ) : (
+        <Spinner />
       )}
     </>
   );

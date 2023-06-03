@@ -13,7 +13,7 @@ const Pokedex = () => {
   const [pokemonName, setPokemonName] = useState(name ?? '');
   const [pokemonType, setPokemonType] = useState(type ?? '');
 
-  const [pageNumber, listSlice, changePages, totalPages] = usePagination(pokemons, 300);
+  const [pageNumber, listSlice, changePages, totalPages] = usePagination(pokemons, 200);
 
   const handleNameChange = (e) => {
     setPokemonName(e.target.value);
@@ -38,10 +38,12 @@ const Pokedex = () => {
 
   return (
     <div className="pokedex-container" onSubmit={handleSubmit}>
-      <h2 className="pokedex-title">Pokedex</h2>
+      <h2 className="pokedex-title">
+        Pokedex <img src="https://i.imgur.com/j2MUPzP.png" alt="pokebola" />
+      </h2>
       <p className="welcome-poketrainer">
         <span>
-          <img src="https://i.imgur.com/kbdfdzu.jpg" alt="Ash" />
+          <img src="https://i.imgur.com/zEOE5cv.jpg" alt="Ash" />
         </span>
         <span>
           Bienvenido {userName.trim().replace(/^\w/, (num) => num.toUpperCase())}
@@ -79,7 +81,11 @@ const Pokedex = () => {
           </select>
         </div>
       </Form>
-
+      <PageComponent
+        pageNumber={pageNumber}
+        changePages={changePages}
+        totalPages={totalPages}
+      />
       <section className="galery-pokemons">
         {listSlice.map((pokemon) => (
           <PokemonCard key={pokemon.url} pokemonData={pokemon} />

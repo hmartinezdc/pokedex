@@ -9,9 +9,13 @@
 body {
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
-  background-color: var(--card-color);
+  background-color: var(--bg-color);
 }
 #root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
 }
 :root {
@@ -22,3 +26,15 @@ body {
   --text-color: white;
   --subtext-color: #C6C8DA;
 }
+.dark__mode {
+  --bg-color: #F6F6F6;
+  --card-color: white;
+  --card-color-g:white;
+  --text-color: black;
+  --subtext-color: #747579;
+}
+* {
+  transition: ease-in-out .3s;
+  transition-property: background-color;
+}
+

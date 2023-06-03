@@ -1,7 +1,28 @@
-.logout-button {
-    top: 35px;
-    right: 30px;
-    width: 50px;
-    background-color: white;
-    border-radius: 5px;
+@media (min-width: 320px) {
+  .container__button {
+    align-self: center;
+    margin-top: 1em;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+  .link__button {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  .logout-button {
+    border: none;
+    border-radius: .2em;
+    background-image: linear-gradient(to right, #00a1fb, #00ec96);
+    color: white;
+    font-size: 0.8rem;
+    padding: .5em  1.2em;
+    cursor: pointer;
+  }
+}
+@media (min-width: 992px) {
+  .logout-button {
+    font-size: 1rem;
+  }
+}

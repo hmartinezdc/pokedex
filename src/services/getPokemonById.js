@@ -16,13 +16,13 @@ export const getPokemonById = async (pokemonId) => {
 
     const adaptedData = {
       id: pokemonData.id,
-      number: String(pokemonData.order).padStart(3, '0'),
+      number: String(pokemonData.id).padStart(3, '0'),
       name: pokemonData.name.replace(/^\w/, (char) => char.toUpperCase()),
       types: pokemonData.types.map((typeInfo) => typeInfo.type.name),
       stats: pokemonData.stats.map((statInfo) => ({
         name: statInfo.stat.name,
         value: statInfo.base_stat,
-        percent: Math.round((statInfo.base_stat / 255) * 100),
+        percent: Math.round((statInfo.base_stat / 200) * 100),
       })),
       img: getPokemonImg(pokemonData.sprites),
       abilities: pokemonData.abilities.map((abilityInfo) => abilityInfo.ability.name),

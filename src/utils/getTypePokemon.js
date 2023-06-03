@@ -15,7 +15,7 @@ export const getTypePokemon = (typePokemon) => {
     electric: '/type/electric.svg',
     psychic: '/type/psychic.svg',
     ice: '/type/ice.svg',
-    dragon: '/type/dragon2.svg',
+    dragon: '/type/dragon.svg',
     dark: '/type/dark.svg',
     fairy: '/type/fairy1.svg',
     shadow: '/type/normal.svg',

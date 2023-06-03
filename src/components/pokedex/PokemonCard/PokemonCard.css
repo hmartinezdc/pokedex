@@ -11,6 +11,7 @@
     background: linear-gradient(to right, var(--card-color), var(--card-color-g));
   }
   .pokemon-header--heigth {
+    width: 100%;
     height: 130px;
     border-radius: 1em 1em 0 0;
     margin-bottom: 1.5em;
@@ -25,7 +26,6 @@
       #bc6b7c 121.95%,
       #7c3f4c 186.11%
     );
-    width: 100%;
   }
   .pokemon-header--fighting {
     background: linear-gradient(
@@ -34,7 +34,6 @@
       #f1613c 169.09%,
       #cb735d 242.33%
     );
-    width: 100%;
   }
   .pokemon-header--flying {
     background: linear-gradient(
@@ -43,7 +42,6 @@
       #4596a8 57.49%,
       #78cbda 135.64%
     );
-    width: 100%;
   }
   .pokemon-header--poison {
     background: linear-gradient(
@@ -52,7 +50,6 @@
       #a564e3 71.28%,
       #ce9bff 135.64%
     );
-    width: 100%;
   }
   .pokemon-header--ground {
     background: linear-gradient(
@@ -61,7 +58,6 @@
       #895c1a 43.67%,
       #d69638 138.4%
     );
-    width: 100%;
   }
   .pokemon-header--rock {
     background: linear-gradient(
@@ -70,7 +66,6 @@
       #8d8d94 57.49%,
       #d3d3d3 135.64%
     );
-    width: 100%;
   }
   .pokemon-header--bug {
     background: linear-gradient(
@@ -79,7 +74,6 @@
       #3bb039 16.57%,
       #aaffa8 209.53%
     );
-    width: 100%;
   }
   .pokemon-header--ghost {
     background: linear-gradient(
@@ -88,7 +82,6 @@
       #454aa8 57.49%,
       #787dda 135.64%
     );
-    width: 100%;
   }
   .pokemon-header--steel {
     background: linear-gradient(
@@ -97,7 +90,6 @@
       #728881 43.67%,
       #a8a8a8 138.4%
     );
-    width: 100%;
   }
   .pokemon-header--fire {
     background: linear-gradient(
@@ -106,7 +98,6 @@
       #e35825 22.55%,
       #e8ae1b 125.72%
     );
-    width: 100%;
   }
   .pokemon-header--water {
     background: linear-gradient(
@@ -115,11 +106,9 @@
       #1479fb 56.16%,
       #82b2f1 214.85%
     );
-    width: 100%;
   }
   .pokemon-header--grass {
     background: linear-gradient(178.92deg, #03c973 .92%, #17ed92 47.96%, #69f3ec 99.08%);
-    width: 100%;
   }
   .pokemon-header--electric {
     background: linear-gradient(
@@ -128,7 +117,6 @@
       #2b319b 43.67%,
       #7075d9 138.4%
     );
-    width: 100%;
   }
   .pokemon-header--psychic {
     background: linear-gradient(
@@ -137,7 +125,6 @@
       #c23867 43.67%,
       #cd7d98 138.4%
     );
-    width: 100%;
   }
   .pokemon-header--ice {
     background: linear-gradient(
@@ -146,7 +133,6 @@
       #64cbf5 47.77%,
       #bdebfe 136.72%
     );
-    width: 100%;
   }
   .pokemon-header--dragon {
     background: linear-gradient(
@@ -155,7 +141,6 @@
       #56a4ae 43.67%,
       #a2bec1 138.4%
     );
-    width: 100%;
   }
   .pokemon-header--dark {
     background: linear-gradient(
@@ -164,19 +149,15 @@
       #0d1211 57.49%,
       #5a5e5d 135.64%
     );
-    width: 100%;
   }
   .pokemon-header--fairy {
     background: linear-gradient(177.03deg, #823b55 -11.97%, #EB91E9 135.64%);
-    width: 100%;
   }
   .pokemon-header--unknown {
     background: linear-gradient(177.03deg, #6fbbc1 -11.97%, #f7f7f6 135.64%);
-    width: 100%;
   }
   .pokemon-header--shadow {
     background: linear-gradient(177.03deg, #676b71 -11.97%, #cecece 135.64%);
-    width: 100%;
   }
   /* -------- colors pokemon--------- */
   .pokemon-img {
@@ -188,10 +169,12 @@
     height: 100%;
     top: 30px;
     align-self: center;
+    
   }
   .pokemon-img img {
     /* width: 90%; */
     height: 100%;
+    cursor: pointer;
     /* scale: 0.4; */
   }
   .pokemon-information {
@@ -208,7 +191,7 @@
     gap: 10px;
   }
   .pokemon-information-name h2 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     color: var(--text-color);
     font-weight: 600;
   }
@@ -239,9 +222,8 @@
     gap: 0 5px;
     text-align: center;
   }
-  .skill-power {
-    font-size: 1rem;
-    font-weight: 600;
+  .pokemon-information-skills p {
+    font-size: .8rem;
   }
   .skill-power-title {
     color: var(--subtext-color);
@@ -252,9 +234,13 @@
 
 @media (min-width: 576px) {
   .pokemon-card {
-    width: 100%;
+    display: flexbox;
+  }
+}
+@media (min-width: 768px){
+  .pokemon-card {
+    width: 250px;
+    flex-shrink: 1;
     display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }

@@ -8,7 +8,7 @@
   .pagination__arrow {
     border: none;
     font-size: 1.5rem;
-    color: white;
+    color: var(--text-color);
     background-color: transparent;
   }
   .pagination__pages {
@@ -17,7 +17,7 @@
   }
   .pagination__current-page {
     background-color: transparent;
-    color: white;
+    color: var(--text-color);
     width: 2rem;
     aspect-ratio: 1/1;
     border: none;

@@ -1,17 +1,176 @@
 @media (min-width: 320px) {
-  .pokemon__detail-types {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--subtext-color);
-    padding-bottom: 5px;
+  .pokemon__detail-container {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    /* padding-bottom: 20px; */
+    background-color: var(--bg-color);
+    /* background-image: linear-gradient(rgba(0, 1, 7, 0.8), rgba(0, 0, 0, 0.8)),
+      url(https://i.imgur.com/epIzyvh.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; */
   }
-  .pokemon__detail-types span {
+  .pokemon__detail {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+  }
+  .pokemon__detail_name-number{
+    /* background-color: aqua; */
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pokemon__name {
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+  .pokemon__number {
+    color: var(--subtext-color);
+  }
+/* -----imagen y descripcion ------ */
+  .pokemon__detail_description-img{
+    /* background-color: chartreuse; */
+    flex: 2 1 300px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .detail__description {
+    flex: 1 1 80px;
+    font-size: .8rem;
+    list-style: none;
+    color: var(--subtext-color);
+  }
+  .detail__img {
+    flex: 2 1 300px;
+    display: flex;
+    justify-content: center;
+  }
+  .detail__img img {
+    width: 80%;
+  }
+  
+/* ----- todas sus caracteristicas------ */
+  .pokemon__detail_skills-stats{
+    /* background-color: white; */
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+  .pokemon__detail_skills-stats h2 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+  
+  /* ----- icono por typo de pokemon ------ */
+  .datail__skills-types {
+    /* background-color: aqua; */
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--subtext-color);
+    display: flex;
+    justify-content: space-around;
+  }
+  .datail__skills-types span {
     display: flex;
     gap: 0.3em;
+    /* background-color: rgb(255, 255, 255); */
   }
-  .pokemon__detail-types img {
+  .datail__skills-types img {
     width: 1.8rem;
+  }
+  /* ---- habilidades ------ */
+  .skills-abilities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .skills-abilities>p {
+    background-color: var(--card-color);
+    color: var(--text-color);
+    padding: 0 .3em;
+    border-radius: 5px;
+  }
+  /* ----Estadisticas----- */
+  .detail__skills-stats {
+    display: flex;
+    flex-direction: column;
+  }
+  .skill__stat {
+    display: flex;
+    align-items: center;
+  }
+  .skill__stats-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .skill__stat-name {
+    width: 80px;
+    font-size: .9rem;
+    font-weight: 400;
+    color: var(--subtext-color);
+  }
+  .skill__stat-percent {
+    flex: 1;
+  }
+  .skill-power {
+    width: 30px;
+    font-size: .8rem;
+    font-weight: 400;
+    color: var(--text-color);
+  }
+  .skill__stat-percent > div {
+    border-radius: 10px;
+    height:10px;
+  }
+  .pokemon__detail_back-next {
+    width: 90%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .pokemon__detail_back-next .Link__button {
+    text-decoration: none;
+    /* color: var(--text-color); */
+  }
+}
+@media (min-width: 992px) {
+  /* -----imagen y descripcion ------ */
+  .detail__description {
+    flex: 1 1 50px;
+    font-size: 1.2rem;
+    align-self: center;
+  }
+  .detail__img {
+    flex: 2 1 400px;
+  }
+  .detail__img img {
+    width: 100%;
+  }
+  .pokemon__name {
+    font-size: 3rem;
+  }
+  .pokemon__number {
+    font-size: 3rem;
+  }
+  .pokemon__detail_skills-stats h2 {
+    font-size: 2rem;
+  }
+  .skill__stat-name {
+    font-size: 1rem;
+  }
+  .skill-power {
+    font-size: 1rem;
   }
 }
