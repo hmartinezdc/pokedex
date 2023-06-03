@@ -18,6 +18,14 @@ const PokemonDetail = () => {
     };
     return skill[nameSkill] || nameSkill;
   };
+  const hadlePrevPage = (pokeId) => {
+    if (Number(pokeId) <= 1) return 1;
+    return Number(pokeId) - 1;
+  };
+  const hadleNextPage = (pokeId) => {
+    if (Number(pokeId) > 1281) return 1281;
+    return Number(pokeId) + 1;
+  };
 
   useEffect(() => {
     const loadData = async () => {
@@ -95,14 +103,14 @@ const PokemonDetail = () => {
       )}
       <section className="pokemon__detail_back-next">
         <Link
-          to={`/pokedex/${Number(id) - 1}`}
+          to={`/pokedex/${hadlePrevPage(id)}`}
           className={`Link__button ${getTextColor(pokemon?.types[0])}`}
         >
           {' '}
           <i className="fa-solid fa-arrow-left"></i> Atras{' '}
         </Link>
         <Link
-          to={`/pokedex/${Number(id) + 1}`}
+          to={`/pokedex/${hadleNextPage(id)}`}
           className={`Link__button ${getTextColor(pokemon?.types[0])}`}
         >
           {' '}
